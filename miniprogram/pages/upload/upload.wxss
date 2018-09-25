@@ -1,0 +1,36 @@
+/* pages/upload/upload.wxss */
+.w100{
+  width: 100%;
+}
+
+.imgTx{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 0.5;
+  overflow: hidden
+}
+
+.username{
+  height: 60rpx;
+}
+.item{
+  font-size: 32rpx;
+  line-height: 60rpx;
+  text-align: left
+}
+
+.head{
+
+  height: 60rpx;  
+}
+.content{
+  
+}
+
+.f1{
+  flex: 1;
+}
+
+.f2{
+  flex: 2;
+}

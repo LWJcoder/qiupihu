@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<scroll-view>
+  <view class='item '  wx:for="{{datas}}" wx:key="{{index}}">
+    <navigator class='flexDownC' url='../itemDetail/itemDetail?id={{item.id}}'>
+      <view class='userInfo flexRowL'> <view class='user flexC'> <image src='{{item.userImg || defaultImg}}' class='userImg'></image> {{item.username || '糗皮虎'}}</view> </view>
+      <view class='txt'>{{item.content}}</view>
+      <view class='img' wx:for="{{item.image}}" wx:for-item='imgItem' > <image lazy-load="{{lazy_load}}" mode='widthFix' src='{{("http://"+imgItem) || ""}}' class='{{item.image.length ==1 ?"dzImg1": item.image.length == 2 ?"dzimg2": item.image.length == 3 ? "dzImg3" : item.image.length == 4 ? "dzImg4": "" }} dzImg' ></image> </view>
+    </navigator>
+      <view class='btnsRow flexRowL'>
+        <view class='ml20  flexC' bindtap='zan' data-index='{{index}}'>
+          <image src='{{item.zanUrl}}' class='btns ml20' ></image> 
+          <text class='ml10'> {{item.vote || 0}}</text>
+        </view>
+        <view class='ml60  flexC' bindtap='nav2Detail'  data-id='{{item.id}}'><image src='../../images/comment.png' class='btns ml40'></image> <text class='ml10'> {{item.commentNum || 0}}</text></view>
+        <view class='ml60 '><label class='flexC'   > <image src='../../images/share.png' class='btns ml40'></image> <text class='ml10'> {{item.shareNum || 0}}</text> <button open-type='share' hidden='hidden'  data-qiuId='{{item.id}}' data-shareNum='{{item.shareNum}}'></button> </label> </view>
+      </view>
+
+      <view class='garyLine'></view>
+    
+  </view>
+
+<view class='pushTop' bindtap='refresh'>上拉刷新...</view>
+</scroll-view>
+
+
+
+
+

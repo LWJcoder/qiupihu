@@ -1,0 +1,15 @@
+<!--pages/upload/upload.wxml-->
+<view class='flexDownC w100'>
+  <view wx:for='{{data}}' class='flexDownC w100 item'>
+    <navigator url='../itemDetail/itemDetail?id={{item.id}}' class='flexDownC w100 item'>
+      <view class='head w100 flexRowL'>
+        <image src='../../images/tx.png' class='imgTx ml20'></image>
+        <text class='ml20 username'>{{item.username}}</text>
+      </view>
+      <view class='content flexDownC w100'>
+        <text class='f2 cccc ml20 w100 flexRowL'>{{item.content}}</text>
+        <image src='{{item.image[0]}}'  mode='widthFix' class='w100 f1 '></image>                
+      </view>
+    </navigator>
+  </view>
+</view>

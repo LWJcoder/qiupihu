@@ -1,0 +1,64 @@
+/* pages/pulish/pulish.wxss */
+
+
+.input{
+  font-size: 28rpx;
+  color: #666;
+  width: 100%;
+  min-height: 60rpx;
+  height: auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.fl{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pic{
+  width: 64rpx;
+  height: 64rpx;
+  margin-left: 20rpx;
+}
+
+.w100{
+  width: 100%;
+}
+
+.pulishBtn{
+  width: 100rpx;
+  height: 50rpx;
+  color: #fff;
+  font-size: 28rpx;
+  background: #ea9518;
+  border-radius: 0.1;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 20rpx;
+  line-height: 50rpx;
+}
+
+.h100{
+  height: 100rpx;
+}
+
+
+.imgUrlClass2{
+  width: 50%;
+}
+
+.imgUrlClass1{
+    width: 100%;
+}
+
+
+.imgUrlClass3{
+    width: 33%;
+}
+
+.imgUrlClass4{
+    width: 24%;
+}
+
+

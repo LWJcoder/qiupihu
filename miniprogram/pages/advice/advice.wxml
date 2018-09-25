@@ -1,0 +1,11 @@
+<!--pages/advice/advice.wxml-->
+<view class='flexDownC ft28 c999 w100 pl20'>
+  <view class='flexRowL w100'> 请提出你的宝贵意见:
+  </view>
+  <view class='inputA flexRowL w100 mt20'>
+    <textarea auto-height auto-focus maxlength='500'  placeholder-style='margin-left:20rpx;' placeholder='意见/建议' class='textarea w100' value='{{textarea}}' bindinput='textareaHandler' show-confirm-bar='{{showCBtn}}' bindconfirm='complate'></textarea>
+  </view>
+  <view class='w100 flexC mt40'>
+    <button class='btn' bindtap='complate'>提交</button>
+  </view>
+</view>

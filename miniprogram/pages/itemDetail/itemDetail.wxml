@@ -1,0 +1,55 @@
+<!--pages/itemDetail/itemDetail.wxml-->
+<view class='flexDownC content'>
+  <view class='content flexDownC w100'>
+    <view class='userInfo flexRowL w100'>
+      <view class='user flexC '>
+        <image src='{{data.userImg || defaultImg}}' class='userImg'></image> {{data.username || '糗皮虎'}}</view>
+    </view>
+    <view class='txt'>{{data.content}}</view>
+    <view class='img w100' wx:for="{{data.image}}" wx:for-item='imgItem'>
+      <image lazy-load="{{lazy_load}}" mode='widthFix' src='{{(imgItem) || ""}}' class='{{data.image.length ==1 ?"dzImg1": data.image.length == 2 ?"dzimg2": data.image.length == 3 ? "dzImg3" : data.image.length == 4 ? "dzImg4": "" }} dzImg'></image>
+    </view>
+    <view class='btnsRow flexRowL'>
+      <view class='ml20  flexC' bindtap='zan' data-id='{{data.id}}' data-vote='{{data.vote}}'>
+        <image src='{{!voteFlag ? shareIconUrl: shareIconUrl1}}' class='btns ml20'></image>
+        <text class='ml10'> {{data.vote || 0}}</text>
+      </view>
+      <view class='ml60  flexC'>
+        <image src='../../images/comment.png' class='btns ml40'></image>
+        <text class='ml10'> {{data.commentNum || 0}}</text>
+      </view>
+      <view class='ml60  flexC'>
+        <label class='flexC'  data-qiuId='{{data.id}}'>
+          <image src='../../images/share.png' class='btns ml40'></image>
+           <button open-type='share' hidden='hidden'  data-qiuId='{{data.id}}' data-shareNum='{{data.shareNum}}'></button> 
+        </label>
+        <text class='ml10'> {{data.shareNum || 0}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='garyLine'></view>
+  <view class='comments flexDownC'>
+    <view wx:if='{{data.comment.length > 0}}' class='com'>
+      <view wx:for='{{data.comment}}' wx:key="{{index}}" class='comItem flexDownC'>
+        <view class='userInfo flexRowL'>
+          <view class='user flexC'>
+            <image src='{{item.avatar || defaultImg}}' class='userImg'></image> {{item.username || '糗皮虎'}}</view>
+        </view>
+        <view class='txt'>{{item.comment}}</view>
+        <view class='time textalignRight'>{{item.time}}</view>
+      </view>
+      
+    </view>
+    <view wx:else class='noComment'>
+      暂无评论...
+    </view>
+  </view>
+</view>
+
+<view class='flexC w100' wx:if='{{isShareTip}}'>
+  <button bindtap='navBack' class='navBtn'>回到首页</button>
+</view>
+
+<view class='bottomInput flexC' >
+  <input class='inputB' placeholder='友善发言的人运气不会太差' placeholder-style='color:#ccc' maxlength='120' value='{{commentTxt}}' confirm-type='send' bindinput='inputHandler' bindconfirm='confirm'></input>
+</view>

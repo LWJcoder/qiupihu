@@ -1,0 +1,48 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/advice/advice",
+    "pages/comment/comment",
+    "pages/me/me",
+    "pages/upload/upload",
+    "pages/itemDetail/itemDetail",
+    "pages/pulish/pulish"
+   
+  
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "糗皮虎 开心之源",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": -40
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#580000",
+    "borderStyle": "1px solid #f5f5f5",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/index.png",
+        "selectedIconPath": "./images/index1.png"
+      },
+      {
+        "pagePath": "pages/pulish/pulish",
+        "text": "发表",
+        "iconPath": "./images/pulish.png",
+        "selectedIconPath": "./images/pulish1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/me.png",
+        "selectedIconPath": "./images/me1.png"
+      }
+    ]
+  }
+}

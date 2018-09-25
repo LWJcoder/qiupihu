@@ -1,0 +1,21 @@
+<!--pages/pulish/pulish.wxml-->
+<view class='flexDownC'>
+  <view class='flexDownC w100'> 
+    <textarea class='input' bindinput='textInput' placeholder-style='margin-left:20rpx;' maxlength='500' placeholder='和大家一起分享你遇到的趣事,糗事吧' value='{{text}}' auto-focus auto-height></textarea>
+  </view>
+
+  <view class='btm flexSpaceBet w100'>
+  <image src='../../images/pic.png' class='pic' bindtap='doUpload'></image>
+  <view class='pulishBtn' bindtap='pulish'> 发布</view>
+  
+  </view>
+  <!--  wx:for='{{imgUrl}}' -->
+  <view class='flexCenter w100' wx:if='{{imgUrl}}'>
+    <!-- <view  wx:for='{{imgUrl}}' class='{{imgUrl.length == 1? "imgUrlClass1": imgUrl.length == 2? "imgUrlClass2": imgUrl.length == 3? "imgUrlClass3": "imgUrlClass4"}}' > -->
+      <image src='{{imgUrl}}' class='w100'  mode="aspectFit" ></image>
+    <!-- </view> -->
+    
+  </view>
+  <!-- <image class='w100' src='cloud://qiupihu-d1e452.7169-qiupihu-d1e452/1451.gif'></image> -->
+
+</view>

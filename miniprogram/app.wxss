@@ -1,0 +1,116 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+.c999{
+  color: #999;
+}
+
+.ft28{
+  font-size: 28rpx;
+}
+.w100{
+  width: 100%;
+}
+
+.mt20{
+  margin-top: 20rpx
+}
+.mt40{
+  margin-top: 40rpx
+}
+
+.flexC{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCenter_R{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexAlignC{
+  display: flex;
+  align-items: center;
+}
+.flexRowL{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.inputA{
+
+}
+
+.textAL{
+  text-align: left
+}
+
+.flexSpaceBet{
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.cccc{
+  color: #999;
+  font-size: 30rpx;
+}
+
+.flexDownCStart{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flexDownC{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.mt80{
+  margin-top: 80rpx;
+}
+
+.flexDownCStart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.displayBlo{
+  display: inline-block;
+ 
+}
+
+.ml10{
+  margin-left: 10rpx;
+}
+
+.ml20{
+  margin-left: 20rpx;
+}
+
+.ml40{
+  margin-left: 40rpx;
+}
+
+.ml60{
+  margin-left: 60rpx;
+}
+
+.textalignRight{
+  text-align: right
+}

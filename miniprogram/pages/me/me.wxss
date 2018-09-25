@@ -1,0 +1,63 @@
+/* pages/me/me.wxss */
+.font{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.bg{
+  width: 100%;
+  height: 400rpx;
+  background: url('http://pfc4cxq5a.bkt.clouddn.com/userBg.gif') no-repeat;
+  background-size: 100% 100%;
+
+}
+
+.userTx{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.usernameDe{
+   font-size: 28rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.pl10{
+  padding-left: 10rpx;
+}
+
+.username{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.rows{
+  width: 100%;
+  height: 500rpx
+}
+
+.row{
+  width: 100%;
+  
+}
+
+.row:last-child{
+  border-bottom: 1px solid #ccc;
+}
+
+.navTo{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx
+}
+
+.navRow{
+  border-top: 1px solid #ccc;
+  height: 100rpx;
+  padding-left: 20rpx;
+}

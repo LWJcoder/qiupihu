@@ -1,0 +1,37 @@
+<!--pages/me/me.wxml-->
+<view class='flexDownC font'>
+  <view class='bg flexDownC'>
+    <label>
+      <image class='userTx' src='{{userTx || defaultUrl}}'></image>
+      <button open-type='getUserInfo' bindgetuserinfo='getUserInfoHandler'></button>
+    </label>
+    <view>
+      <text class='{{ username == "点击头像登录" ? "usernameDe":"username"}} '>{{username}}</text>
+    </view>
+  </view>
+
+  <view class='flexDownC mt80 rows'>
+    <navigator url='../comment/comment' class='row'>
+    <view class=" navRow flexSpaceBet">
+      <text>我的评论</text> 
+      <image src='../../images/left.png' class='navTo'></image>
+    </view>
+     </navigator>
+    <navigator url='../upload/upload' class='row'>
+    <view class=" navRow flexSpaceBet">
+      <text>我的发布 </text> 
+       <image src='../../images/left.png' class='navTo'></image>
+    </view>
+    </navigator>
+    <navigator url='../advice/advice'  class='row'>
+    <view class=" navRow flexSpaceBet">
+      <text> 建议反馈 </text> 
+       <image src='../../images/left.png' class='navTo'></image>
+    </view>
+    </navigator>
+    <view class="row navRow flexSpaceBet " bindtap='showInfo'>
+      <text class='pl10'> 关于 </text> 
+       <image src='../../images/left.png' class='navTo'></image>
+    </view>
+  </view>
+</view>

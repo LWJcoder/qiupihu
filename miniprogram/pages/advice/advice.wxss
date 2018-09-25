@@ -1,0 +1,17 @@
+/* pages/advice/advice.wxss */
+
+
+.pl20{
+  padding: 20rpx;
+}
+
+.btn{
+  width:550rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ea9518;
+  color: #fff;
+  font-weight: bold;
+  font-size: 34rpx;
+
+}
