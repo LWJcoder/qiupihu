@@ -110,7 +110,7 @@ Page({
   showInfo: function(){
     wx.showModal({
       title: '关于糗皮虎',
-      content: '本小程序的内容来源于网上各大平台(如糗百等),如有侵权,请联系管理员johnnymike007@gmail.com',
+      content: '本小程序的内容来源于网上各大平台(如糗百等),如有侵权,请联系管理员**@gmail.com',
       showCancel: false
     })
   }
