@@ -6,6 +6,7 @@
     "pages/comment/comment",
     "pages/me/me",
     "pages/upload/upload",
+    "pages/validContent/validContent",
     "pages/itemDetail/itemDetail",
     "pages/pulish/pulish"
    
@@ -32,10 +33,10 @@
         "selectedIconPath": "./images/index1.png"
       },
       {
-        "pagePath": "pages/pulish/pulish",
-        "text": "发表",
-        "iconPath": "./images/pulish.png",
-        "selectedIconPath": "./images/pulish1.png"
+        "pagePath": "pages/validContent/validContent",
+        "text": "审核",
+        "iconPath": "./images/newF.png",
+        "selectedIconPath": "./images/newF1.png"
       },
       {
         "pagePath": "pages/me/me",

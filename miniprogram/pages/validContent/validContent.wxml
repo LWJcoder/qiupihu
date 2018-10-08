@@ -1,0 +1,21 @@
+<!--pages/validContent/validContent.wxml-->
+<view wx:if='{{!data}}' class='flexDownC mt40'>
+  <image src='../../images/404.png' class='p404'></image>
+  <text>暂无贴子可以审核</text>
+</view>
+<view wx:else>
+  <view class='userInfo flexRowL' > 
+    <view class='user flexC'> 
+      <image src='{{data.userImg || defaultImg}}' class='userImg'></image> {{data.username || '糗皮虎'}}</view> 
+    </view>
+    <view class='txt'>{{data.content}}</view>
+
+    <view class='img' wx:for="{{data.image}}" wx:for-item='imgItem' > 
+      <image lazy-load="{{lazy_load}}" mode='widthFix' src='{{imgItem}}' class='{{data.image.length ==1 ?"dzImg1": data.image.length == 2 ?"dzimg2": data.image.length == 3 ? "dzImg3" : data.image.length == 4 ? "dzImg4": "" }} dzImg' ></image>     
+    </view>
+
+    <view class='btns flexSpaceBet'>
+      <image  class='passi ml20' src='../../images/noPass.png'  bindtap='unPassItem'></image>
+      <image  class='passi mr20' src='../../images/pass.png' bindtap='passItem'></image>
+    </view>
+</view>

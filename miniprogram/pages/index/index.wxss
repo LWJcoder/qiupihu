@@ -31,6 +31,18 @@ page {
 
 }
 
+.posiFix{
+  position: fixed;
+  bottom: 30rpx;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.addIcon{
+  width: 60rpx;
+  height: 60rpx;
+}
+
 .txt{
   width: 98%;
   line-height: 50rpx;

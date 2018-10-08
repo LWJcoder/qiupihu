@@ -4,9 +4,9 @@
     <textarea class='input' bindinput='textInput' placeholder-style='margin-left:20rpx;' maxlength='500' placeholder='和大家一起分享你遇到的趣事,糗事吧' value='{{text}}' auto-focus auto-height></textarea>
   </view>
 
-  <view class='btm flexSpaceBet w100'>
-  <image src='../../images/pic.png' class='pic' bindtap='doUpload'></image>
-  <view class='pulishBtn' bindtap='pulish'> 发布</view>
+  <view class='btm flexSpaceBet w100 publishItem'>
+    <image src='../../images/pic.png' class='pic' bindtap='doUpload'></image>
+    <view class='pulishBtn' bindtap='pulish'> 发布</view>
   
   </view>
   <!--  wx:for='{{imgUrl}}' -->

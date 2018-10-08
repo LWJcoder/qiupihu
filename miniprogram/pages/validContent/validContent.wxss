@@ -1,0 +1,21 @@
+/* pages/validContent/validContent.wxss */
+@import '../index/index.wxss';
+
+page{
+  font-size: 24rpx;
+  color: #999;
+}
+
+.btns{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 60rpx;
+  left: 0;
+}
+
+.passi{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 
+}

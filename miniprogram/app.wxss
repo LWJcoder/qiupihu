@@ -46,8 +46,8 @@
   justify-content: flex-start;
 }
 
-.inputA{
-
+.mt20{
+  margin-top: 20rpx;
 }
 
 .textAL{
@@ -102,6 +102,9 @@
 .ml20{
   margin-left: 20rpx;
 }
+.mr20{
+  margin-right: 20rpx;
+}
 
 .ml40{
   margin-left: 40rpx;
@@ -113,4 +116,9 @@
 
 .textalignRight{
   text-align: right
+}
+
+.p404{
+  width: 100rpx;
+  height: 110rpx;
 }

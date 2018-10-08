@@ -27,13 +27,13 @@ Page({
 
   },
   search: function(){
-    let  userId = wx.getStorageSync('userId')    
+    let openId = wx.getStorageSync('openId')    
     wx.showLoading({
       title: '刷新中...',
      
     })
     db.collection('comments').where({
-      userId: _.eq(userId)
+      _openid: _.eq(openId)
     }).get({
       success: res => {
         wx.hideLoading()

@@ -72,6 +72,8 @@ Page({
     const db = wx.cloud.database()
     const _ = db.command
 
+    let userOpenId = wx.getStorageSync('openId')
+ 
     //发送评论
     let d = new Date(),data = {};
     let arr = util.typeC(this.data.data.comment) == 'array' ? this.data.data.comment : new Array(this.data.data.comment);
@@ -93,16 +95,8 @@ Page({
       })
 
    
-    if (!data.avatar || !data.userId){
-      wx.getSetting({
-        success: function(data){
-          console.log(data)
-      
-        },
-        fail: function(e){
-   
-        }
-      })
+    if (!userOpenId){
+     
       wx.showToast({
         title: '您还未登录,请先登录',
         icon: 'none'
@@ -118,7 +112,8 @@ Page({
         data: {
           id: data.userId,
           userId: data.userId,
-          text: data.comment
+          text: data.comment,
+          _openid: userOpenId
         },
         success: res=>{
           console.log('comment新增成功')

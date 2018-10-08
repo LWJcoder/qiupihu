@@ -36,29 +36,58 @@ Page({
     })
     wx.setStorageSync('username', d.nickName)
     wx.setStorageSync('avatar', d.avatarUrl)
+
     const db = wx.cloud.database()
     const _ = db.command
     var userId = wx.getStorageSync('userId')
     if (!userId) {
       userId = this.getUserId()
     }
-    setTimeout(()=>{
-      db.collection('users').add({
-        data: {
-          userId: userId,
-          iv: d.iv
-        },
-        success: function () {
-          wx.showToast({
-            title: '用户登录成功',
-          })
-          console.log('用户id新增成功')
-        },
-        fail: function (e) {
-          console.log('用户id新增失败')
+
+    db.collection('users').where({
+      _openid: d.openid
+    }).get({
+      success: res=>{
+        console.log('查询用户:',res)
+        if (res.data && res.data.length > 0){
+          console.log('已存在')
+          wx.setStorageSync('openId', res.data[0]._openid)
+        }else{
+
+          setTimeout(() => {
+            db.collection('users').add({
+              data: {
+                userId: userId,
+                iv: d.iv
+              },
+              success: function () {
+                wx.showToast({
+                  title: '用户登录成功',
+                })
+                console.log('用户id新增成功')
+                db.collection('users').where({
+                  userId: userId
+                }).get({
+                  success: res => {
+                    wx.setStorageSync('openId', res.data[0]._openid)
+                  },
+                  fail: err=>{
+                    console.log('用户_openid设置失败')
+                  }
+                })
+              },
+              fail: function (e) {
+                console.log('用户id新增失败')
+              }
+            })
+          }, 100)
         }
-      })
-    }, 100)
+      },
+      fail: err=>{
+
+      }
+    })
+
     
   },
   getUserId: function () {

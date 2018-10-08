@@ -11,6 +11,7 @@
   </view>
 
   <view class='flexDownC mt80 rows'>
+   
     <navigator url='../comment/comment' class='row'>
     <view class=" navRow flexSpaceBet">
       <text>我的评论</text> 

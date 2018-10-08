@@ -18,6 +18,24 @@ Page({
    */
   onLoad: function (options) {
     this.getCount()
+    
+  },
+  onShow: function(){
+    let userOpenId = wx.getStorageSync('openId')
+    if (!userOpenId) {
+      wx.showToast({
+        title: '您还未登录,请先登录~',
+        icon: 'none'
+      })
+
+      setTimeout(() => {
+        wx.switchTab({
+          url: '../me/me',
+        })
+      }, 1500)
+    } else {
+      console.log(userOpenId)
+    }
   },
   getCount: function(){
 
@@ -47,12 +65,16 @@ Page({
       id: Number(this.data.count) +1,
       shareNum: 0,
       commentNum: 0,
-      unValid: 1
+      validStatus: 0,
+      validTime: 0
     }
+    //validStatus: 审核状态, 通过时候 +1, 反对时候-1
+    //validTime: 审核次数, 最多5次,如果反对的人大于等于3,则不通过
+
     console.log(data)
 
     if (data.content){
-        db.collection('funnys').add({
+      db.collection('funnys').add({
           data: data,
           success:res => {
             wx.showToast({

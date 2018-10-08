@@ -26,6 +26,13 @@
   width: 100%;
 }
 
+.publishItem{
+  margin-top: 80rpx;
+  height: 80rpx;
+  border-top: 1px solid #ea9518;
+  border-bottom: 1px solid #ea9518;
+}
+
 .pulishBtn{
   width: 100rpx;
   height: 50rpx;

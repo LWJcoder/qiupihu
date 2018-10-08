@@ -28,7 +28,7 @@ Page({
       db.collection('advices').add({
         data: {
           text: that.data.text,
-          userId: wx.getStorageSync('userId') || '游客'
+          openId: wx.getStorageSync('openId')
         },
         success: res =>{
           wx.showToast({

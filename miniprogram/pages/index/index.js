@@ -107,7 +107,7 @@ Page({
     db.collection('funnys').where(
       {
         id: _.lt((page + 1) * 20).and(_.gt(page * 20)),
-        unValid: _.neq(1)
+        validStatus: _.neq(0)
       }
     ).get({
       success: res => {

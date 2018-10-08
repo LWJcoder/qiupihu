@@ -19,8 +19,12 @@
     
   </view>
 
-<view class='pushTop' bindtap='refresh'>上拉刷新...</view>
+<view class='pushTop' bindtap='refresh'>上拉|点击刷新...</view>
 </scroll-view>
+
+<navigator url='../pulish/pulish' class='posiFix'>
+  <image src='../../images/add.png' class='addIcon' > </image>
+</navigator>
 
 
 
